@@ -21,4 +21,10 @@ describe('Puzzle', function() {
     expect(puzzle.getSpace(2, 4)).to.equal(2);
     expect(puzzle.getSpace(7, 6)).to.equal(3);
   });
+
+  it('correctly reports height, width, and size', function() {
+    expect(puzzle.getHeight()).to.equal(9);
+    expect(puzzle.getWidth()).to.equal(9);
+    expect(puzzle.getSize()).to.equal(81);
+  });
 });
