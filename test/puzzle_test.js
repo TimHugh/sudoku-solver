@@ -1,10 +1,7 @@
 var expect = require('chai').expect
 var Puzzle = require('../lib/puzzle.js');
 
-var emptyPuzzleRows = "+---+---+---+\n|...|...|...|\n|...|...|...|\n|...|...|...|\n+---+---+---+\n|...|...|...|\n|...|...|...|\n|...|...|...|\n+---+---+---+\n|...|...|...|\n|...|...|...|\n|...|...|...|\n+---+---+---+\n";
-var puzzleWithNumbers = "+---+---+---+\n|...|...|...|\n|...|2..|...|\n|...|...|...|\n+---+---+---+\n|...|...|...|\n|...|...|...|\n|...|...|...|\n+---+---+---+\n|...|..3|...|\n|...|...|...|\n|...|...|...|\n+---+---+---+\n";
-
-describe('puzzle', function() {
+describe('Puzzle', function() {
   var puzzle;
 
   beforeEach(function() {
@@ -12,13 +9,16 @@ describe('puzzle', function() {
   });
 
   it('is created blank', function() {
-    expect(puzzle.printBoard()).to.equal(emptyPuzzleRows);
+    for(space in puzzle.toArray) {
+      expect(space).to.equal(0);
+    }
   });
 
   it('correctly displays numbers', function() {
-    puzzle.setNumber(2, 4, 2);
-    puzzle.setNumber(7, 6, 3);
+    puzzle.setSpace(2, 4, 2);
+    puzzle.setSpace(7, 6, 3);
 
-    expect(puzzle.printBoard()).to.equal(puzzleWithNumbers);
+    expect(puzzle.getSpace(2, 4)).to.equal(2);
+    expect(puzzle.getSpace(7, 6)).to.equal(3);
   });
 });
