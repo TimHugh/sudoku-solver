@@ -17,4 +17,11 @@ describe('Puzzle Printer', function() {
   it('correctly prints an empty puzzle', function() {
     expect(printer.boardToString()).to.equal(emptyPuzzle);
   });
+
+  it('correctly prints a puzzle with numbers', function() {
+    puzzle.setSpace(2, 4, 2);
+    puzzle.setSpace(7, 6, 3);
+
+    expect(printer.boardToString()).to.equal(puzzleWithNumbers);
+  });
 });
