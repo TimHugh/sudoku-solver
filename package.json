@@ -1,0 +1,24 @@
+{
+  "name": "sudoku-solver",
+  "version": "0.0.1",
+  "description": "Simple sudoku solver",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/TimHugh"
+  },
+  "keywords": [
+    "sudoku",
+    "solver",
+    "js"
+  ],
+  "author": "Tim Heuett",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^2.2.0",
+    "mocha": "^2.2.1"
+  }
+}
