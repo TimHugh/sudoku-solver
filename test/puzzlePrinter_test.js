@@ -18,8 +18,8 @@ describe('Puzzle Printer', function() {
   });
 
   it('correctly prints a puzzle with numbers', function() {
-    puzzle.setSpace(2, 4, 2);
-    puzzle.setSpace(7, 6, 3);
+    puzzle.setSpace(1, 3, 2);
+    puzzle.setSpace(6, 5, 3);
 
     string = PuzzlePrinter.boardToString(puzzle);
 
