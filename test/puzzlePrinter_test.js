@@ -7,21 +7,22 @@ var puzzleWithNumbers = "+---+---+---+\n|...|...|...|\n|...|2..|...|\n|...|...|.
 
 describe('Puzzle Printer', function() {
   var puzzle;
-  var printer;
 
   beforeEach(function() {
-    puzzle = new Puzzle;
-    printer = new PuzzlePrinter(puzzle);
+    puzzle = new Puzzle();
   });
 
   it('correctly prints an empty puzzle', function() {
-    expect(printer.boardToString()).to.equal(emptyPuzzle);
+    string = PuzzlePrinter.boardToString(puzzle);
+    expect(string).to.equal(emptyPuzzle);
   });
 
   it('correctly prints a puzzle with numbers', function() {
     puzzle.setSpace(2, 4, 2);
     puzzle.setSpace(7, 6, 3);
 
-    expect(printer.boardToString()).to.equal(puzzleWithNumbers);
+    string = PuzzlePrinter.boardToString(puzzle);
+
+    expect(string).to.equal(puzzleWithNumbers);
   });
 });
